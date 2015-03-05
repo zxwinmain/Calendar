@@ -1,0 +1,43 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<div id="component_window_inner" class="component_window_inner_event">
+    <div class="component_window_inner_tab" data-tab="basic">
+        <div class="section">
+            <label><%= locale.root.component_window.calendar.event_start %></label>
+            <input id="input_event_start" class="input" name="EVENT_START" value="<%= EVENT_START %>" disabled="disabled">
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.calendar.event_end %></label>
+            <input id="input_event_end" class="input" name="EVENT_END" value="<%= EVENT_END %>" disabled="disabled">
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.calendar.event_class %></label>
+            <select id="select_event_class" class="select <%= EVENT_CLASS %>" name="EVENT_CLASS" disabled="disabled">
+                <option value="fc-red" class="fc-red"<% if (EVENT_CLASS == 'fc-red') { %> selected<% }; %>><%= locale.root.component_window.calendar.event_class_important_emergency %></option>
+                <option value="fc-purple" class="fc-purple"<% if (EVENT_CLASS == 'fc-purple') { %> selected<% }; %>><%= locale.root.component_window.calendar.event_class_important %></option>
+                <option value="fc-yellow" class="fc-yellow"<% if (EVENT_CLASS == 'fc-yellow') { %> selected<% }; %>><%= locale.root.component_window.calendar.event_class_emergency %></option>
+                <option value="fc-gray" class="fc-gray"<% if (EVENT_CLASS == 'fc-gray') { %> selected<% }; %>><%= locale.root.component_window.calendar.event_class_common %></option>
+                <option value="fc-blue" class="fc-blue"<% if (EVENT_CLASS == 'fc-blue') { %> selected<% }; %>><%= locale.root.component_window.calendar.event_class_personal %></option>
+                <option value="fc-green" class="fc-green"<% if (EVENT_CLASS == 'fc-green') { %> selected<% }; %>><%= locale.root.component_window.calendar.event_class_other %></option>
+            </select>
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.calendar.event_owner %></label>
+            <select id="select_event_owner" class="select" name="EVENT_OWNER" disabled="disabled">
+                <% 
+                    var users = app.instances.collections.users.toJSON();
+                    for(var index in users) { 
+                %>
+                    <option value="<%= users[index].id %>"<% if (EVENT_OWNER == users[index].id) { %>selected<% } %>><%= users[index].name %> - <%= users[index].email %></option>
+                <% } %>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="sidebar sidebar_event">
+    <div class="section">
+        <input name="EVENT_NAME" type="text" class="input" placeholder="<%= locale.root.component_window.calendar.event_name %>" value="<%= EVENT_NAME %>" disabled="disabled">
+        <div class="event_intro"><%= EVENT_INTRO %></div>
+    </div>
+</div>

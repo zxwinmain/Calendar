@@ -1,0 +1,2093 @@
+#component_head {
+  *zoom: 1;
+  position: fixed;
+  left: 0;
+  width: 200px;
+  top: 0;
+  bottom: 0;
+  background: #354052;
+}
+#component_head:before,
+#component_head:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+#component_head:after {
+  clear: both;
+}
+#component_head .head li {
+  *zoom: 1;
+  border-bottom: 1px solid #293241;
+  color: #eee;
+}
+#component_head .head li:before,
+#component_head .head li:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+#component_head .head li:after {
+  clear: both;
+}
+#component_head .head li a {
+  display: block;
+  height: 90px;
+  color: #eee;
+}
+#component_head .head li a:hover {
+  text-decoration: none;
+  background: #2F3949;
+  color: #fff;
+}
+#component_head .head li img {
+  width: 38px;
+  height: 38px;
+  margin: 28px 10px 20px 15px;
+  float: left;
+}
+#component_head .head li strong {
+  float: left;
+  font-size: 12px;
+  margin-top: 29px;
+  font-weight: normal;
+}
+#component_head .head li strong span {
+  display: block;
+  color: #A0ACBF;
+  margin-top: 5px;
+  height: 2em;
+  width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#component_head .menu li a {
+  outline: none;
+  display: block;
+  padding: 0 15px 0 45px;
+  height: 44px;
+  line-height: 43px;
+  text-decoration: none;
+  border-bottom: 1px solid #293241;
+  color: #A0ACBF;
+  position: relative;
+  font-size: 12px;
+  transition: all, 0.2s;
+  -webkit-transition: all, 0.2s;
+  -moz-transition: all, 0.2s;
+}
+#component_head .menu li a i {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 14px;
+  height: 14px;
+}
+#component_head .menu li a.active,
+#component_head .menu li a.active:hover {
+  color: #fff;
+  background: #4593C1;
+}
+#component_head .menu li a.active i,
+#component_head .menu li a.active:hover i {
+  background: #fff;
+}
+#component_head .menu li a:hover {
+  transition: all, 0.2s;
+  background: #2F3949;
+  color: #fff;
+}
+#component_window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.68);
+  z-index: 999;
+}
+#component_window #component_window_inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 250px;
+  bottom: 0;
+  overflow-y: scroll;
+}
+#component_window #component_window_inner.component_window_inner_event input {
+  width: 230px;
+}
+#component_window #component_window_inner.component_window_inner_event .fc-green {
+  color: #65DB39;
+}
+#component_window #component_window_inner.component_window_inner_event .fc-red {
+  color: #FF3300;
+}
+#component_window #component_window_inner.component_window_inner_event .fc-gray {
+  color: #7E7E7E;
+}
+#component_window #component_window_inner.component_window_inner_event .fc-yellow {
+  color: #ffcc00;
+}
+#component_window #component_window_inner.component_window_inner_event .fc-blue {
+  color: #419AFF;
+}
+#component_window #component_window_inner.component_window_inner_event .fc-purple {
+  color: #B241FF;
+}
+#component_window #component_window_inner.component_window_inner_event select {
+  width: 244px;
+}
+#component_window #component_window_inner.component_window_inner_event select:active,
+#component_window #component_window_inner.component_window_inner_event select:focus {
+  border-color: #888;
+}
+#component_window .container {
+  background: #fff;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  width: 922px;
+  top: 50%;
+  margin: 0 auto;
+  margin-top: -300px;
+  box-shadow: 0 0 8px #222;
+}
+#component_window .wrapper {
+  position: relative;
+  background: #eee;
+  height: 600px;
+}
+#component_window .wrapper .window_cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 8px;
+  right: 10px;
+  background: url('../img/button-cancel.png') no-repeat center center;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+#component_window .sidebar {
+  position: absolute;
+  background: #fff;
+  right: 0;
+  width: 250px;
+  height: 600px;
+  top: 0;
+  border-left: 1px solid #ddd;
+}
+#component_window .sidebar ul {
+  margin-top: 48px;
+}
+#component_window .sidebar ul a {
+  color: #222;
+  display: block;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-left: 4px solid #fff;
+  text-decoration: none;
+}
+#component_window .sidebar ul a.active {
+  background: #ececec;
+  border-left: 4px solid #4f9dd7;
+  color: #4f9dd7;
+}
+#component_window .sidebar ul a:hover {
+  color: #4f9dd7;
+}
+#component_window .sidebar.sidebar_event {
+  width: 600px;
+}
+#component_window .sidebar.sidebar_event .section {
+  padding: 10px 38px;
+}
+#component_window .sidebar.sidebar_event .section:first-child {
+  padding-top: 36px;
+}
+#component_window .sidebar.sidebar_event .input {
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #ddd;
+  width: 500px;
+  padding: 0;
+  padding-left: 2px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  margin-bottom: 1px;
+}
+#component_window .sidebar.sidebar_event .input:active,
+#component_window .sidebar.sidebar_event .input:focus {
+  border-color: #ddd;
+}
+#component_window .sidebar.sidebar_event #editor_toolbar {
+  width: 502px;
+  height: 24px;
+}
+#component_window .sidebar.sidebar_event #editor_toolbar a {
+  color: #333;
+  display: inline-block;
+  background: #eee;
+  padding: 2px 6px 4px 6px;
+  margin-top: 2px;
+  text-decoration: none;
+}
+#component_window .sidebar.sidebar_event #editor_toolbar a.wysihtml5-command-active {
+  background: #999;
+  color: #fff;
+}
+#component_window .sidebar.sidebar_event .wysihtml5-sandbox {
+  margin-top: 1px!important;
+  border-top: 1px solid #ddd!important;
+}
+#component_window .sidebar.sidebar_event .event_intro {
+  height: 485px;
+  overflow-y: auto;
+  font-size: 14px!important;
+  padding-left: 2px;
+  padding-right: 0;
+  width: 500px;
+  line-height: 1.8em;
+  color: #383838;
+  margin-top: 6px;
+}
+#component_window .sidebar.sidebar_event .event_intro h1 {
+  display: block;
+  font-size: 2em;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+#component_window .sidebar.sidebar_event .event_intro p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+#component_window .sidebar.sidebar_event .event_intro li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+#component_window .sidebar.sidebar_event .event_intro ul {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+#component_window .sidebar.sidebar_event .event_intro ul li {
+  list-style-type: disc;
+}
+#component_window .sidebar.sidebar_event .event_intro ol {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+#component_window .sidebar.sidebar_event .event_intro ol li {
+  list-style-type: decimal;
+}
+#component_window .sidebar.sidebar_event .textarea {
+  border: 0;
+  height: 410px;
+  padding-left: 2px;
+  padding-right: 0;
+  font-size: 14px!important;
+  width: 500px;
+  line-height: 1.8em;
+  background: #fff;
+  color: #383838;
+}
+#component_window .section {
+  padding: 15px 38px;
+  padding-bottom: 5px;
+}
+#component_window .section:first-child {
+  padding-top: 38px;
+}
+#component_window .section label {
+  display: block;
+  margin-bottom: 12px;
+  margin-left: 7px;
+  font-weight: bold;
+}
+#component_window .section label span {
+  margin-left: 5px;
+  color: red;
+}
+#component_window .section dl {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  width: 500px;
+}
+#component_window .section dl dt {
+  *zoom: 1;
+  border-bottom: 1px solid #d9d9d9;
+  height: 30px;
+  line-height: 30px;
+}
+#component_window .section dl dt:before,
+#component_window .section dl dt:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+#component_window .section dl dt:after {
+  clear: both;
+}
+#component_window .section dl dt .input {
+  margin: 0;
+  border: 0;
+  padding-left: 15px;
+}
+#component_window .section dl dt #input_save_new_user_name {
+  width: 100px;
+  border-right: 1px solid #eaeaea;
+  padding: 7px 15px;
+}
+#component_window .section dl dt #input_save_new_user_email {
+  width: 209px;
+  padding: 7px 15px;
+}
+#component_window .section dl dt .button {
+  float: right;
+  margin: 0;
+  width: 124px;
+  border: 0;
+  border-left: 1px solid #eaeaea;
+  background: #f7f7f7;
+  color: #333;
+}
+#component_window .section dl dt .button:hover,
+#component_window .section dl dt .button:active {
+  background: #FFFEB8;
+}
+#component_window .section dl dd {
+  *zoom: 1;
+  border-bottom: 1px solid #d9d9d9;
+  height: 30px;
+  line-height: 30px;
+}
+#component_window .section dl dd:before,
+#component_window .section dl dd:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+#component_window .section dl dd:after {
+  clear: both;
+}
+#component_window .section dl dd:last-child {
+  border: 0;
+}
+#component_window .section dl dd .left {
+  float: left;
+  height: 30px;
+}
+#component_window .section dl dd .right {
+  float: right;
+  height: 30px;
+}
+#component_window .section dl dd .name {
+  margin-left: 15px;
+  width: 115px;
+  display: inline-block;
+  border-right: 1px solid #eaeaea;
+}
+#component_window .section dl dd .email {
+  margin-left: 18px;
+  color: #ccc;
+}
+#component_window .section dl dd .administrator,
+#component_window .section dl dd .resetPassword,
+#component_window .section dl dd .delete,
+#component_window .section dl dd .block {
+  display: inline-block;
+  background-color: #f7f7f7;
+  width: 30px;
+  height: 29px;
+  border-left: 1px solid #eaeaea;
+  text-align: center;
+  padding-top: 1px;
+  text-decoration: none;
+}
+#component_window .section dl dd .administrator:hover,
+#component_window .section dl dd .resetPassword:hover,
+#component_window .section dl dd .delete:hover,
+#component_window .section dl dd .block:hover {
+  background-color: #FFFEB8;
+}
+#component_window .section .input {
+  width: 55%;
+  font-size: 12px;
+  line-height: normal;
+  padding: 5px 6px 6px 6px;
+}
+#component_window .section .input,
+#component_window .section .textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+#component_window .section .input:active,
+#component_window .section .textarea:active,
+#component_window .section .input:focus,
+#component_window .section .textarea:focus {
+  background: #fff;
+  border-color: #888;
+}
+#component_window .section .textarea {
+  font-size: 12px !important;
+  width: 80%;
+}
+#component_window .section .button {
+  display: inline-block;
+  margin-right: 10px;
+}
+#app {
+  position: fixed;
+  left: 200px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#app.administratorRest {
+  left: 0;
+}
+#app.administratorRest #container {
+  margin: 0!important;
+}
+#app.without_border #appContainer {
+  border: 0!important;
+}
+#app.calendar {
+  overflow-y: auto;
+  font-size: 12px;
+}
+#app.calendar #calendarContainer {
+  margin: 20px;
+}
+#app.calendar #calendarContainer .calendarLoading {
+  background: rgba(194, 194, 194, 0.1);
+  position: absolute;
+  top: 26px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  z-index: 9;
+}
+#app.calendar #calendarContainer #calendar_filter span {
+  line-height: 32px;
+  font-size: 14px;
+  padding-right: 1px;
+}
+#app.item {
+  font-size: 12px;
+}
+#app.item #container,
+#app.item #appContainer {
+  margin: 20px;
+}
+#app.item #appContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #eaeaea;
+  background: #fff;
+}
+#app.review #container {
+  background: #fff;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  top: 20px;
+  border: 1px solid #eaeaea;
+}
+#app.review #container #mainContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 285px;
+  bottom: 0;
+  word-break: break-all;
+  padding: 25px;
+}
+#app.review #container #mainContainer .mainContainer_head {
+  font-size: 20px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 20px;
+  padding-left: 4px;
+  margin-bottom: 30px;
+}
+#app.review #container #mainContainer .mainContainer_body {
+  position: absolute;
+  bottom: 26px;
+  top: 96px;
+  right: 26px;
+  left: 26px;
+  overflow-y: auto;
+}
+#app.review #container #mainContainer .mainContainer_body span.null {
+  font-size: 14px;
+  margin-left: 3px;
+  color: #555;
+}
+#app.review #container #mainContainer dl {
+  margin-top: 26px;
+  border-left: 5px solid #eee;
+  padding: 0 10px 0 18px;
+}
+#app.review #container #mainContainer dl:first-child {
+  margin-top: 0;
+}
+#app.review #container #mainContainer dl dt {
+  position: relative;
+}
+#app.review #container #mainContainer dl dt .userAvatar {
+  width: 50px;
+  height: 50px;
+}
+#app.review #container #mainContainer dl dt .userName {
+  position: absolute;
+  top: 6px;
+  left: 60px;
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+}
+#app.review #container #mainContainer dl dt .userEmail {
+  position: absolute;
+  left: 60px;
+  top: 28px;
+  color: #ccc;
+}
+#app.review #container #mainContainer dl dd {
+  margin-top: 13px;
+}
+#app.review #container #mainContainer dl dd span {
+  display: inline-block;
+}
+#app.review #container #mainContainer dl dd .message {
+  *zoom: 1;
+}
+#app.review #container #mainContainer dl dd .message:before,
+#app.review #container #mainContainer dl dd .message:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+#app.review #container #mainContainer dl dd .message:after {
+  clear: both;
+}
+#app.review #container #mainContainer dl dd .time {
+  float: left;
+  color: #999;
+  width: 50px;
+  height: 22px;
+  line-height: 22px;
+}
+#app.review #container #mainContainer dl dd .desc {
+  float: left;
+  margin-left: 10px;
+  height: 22px;
+  line-height: 21px;
+}
+#app.review #container #mainContainer dl dd .relation {
+  display: block;
+  margin-top: 4px;
+  margin-left: 60px;
+}
+#app.review #container #mainContainer dl dd .relation .fc-event {
+  margin: 0!important;
+  height: 22px;
+}
+#app.review #container #mainContainer dl dd .relation .fc-event .checkbox {
+  top: 5px;
+  height: 12px;
+  width: 12px;
+  margin-left: 1px;
+}
+#app.review #container #mainContainer dl dd .relation .fc-event span {
+  display: inline;
+}
+#app.review #container #dateSelectorContainer {
+  background: #f7f7f7;
+  position: absolute;
+  right: 0;
+  width: 265px;
+  bottom: 0;
+  top: 0;
+  padding: 25px 0 0 20px;
+  border-left: 1px solid #eaeaea;
+}
+#app.review #container #dateSelectorContainer .xdsoft_datetimepicker {
+  z-index: 500;
+  border-color: #eaeaea!important;
+  position: absolute;
+  box-shadow: none;
+  left: 0;
+  right: 0;
+  padding: 37px 20px 50px 20px;
+  top: 0;
+  border-width: 0 0 1px 0;
+  background: transparent;
+}
+#app.review #container #dateSelectorContainer .xdsoft_datetimepicker .xdsoft_label {
+  background: transparent;
+}
+#app.app {
+  font-size: 12px;
+}
+#app.app #container {
+  border: 1px solid #eaeaea;
+  border-width: 1px 0 0 1px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  bottom: 20px;
+}
+#app.app .appList {
+  background: #fff;
+  border-collapse: collapse;
+  width: 100%;
+}
+#app.app .appList td {
+  border: 1px solid #eaeaea;
+  border-width: 0 1px 1px 0;
+  background: #fcfcfc;
+  width: 25%;
+}
+#app.app .appList td.app {
+  background: #fff;
+  height: 139px;
+}
+#app.app .appList td.app a {
+  *zoom: 1;
+  display: block;
+  height: 139px;
+}
+#app.app .appList td.app a:before,
+#app.app .appList td.app a:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+#app.app .appList td.app a:after {
+  clear: both;
+}
+#app.app .appList td.app a img {
+  float: left;
+  margin: 30px 0 0 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+#app.app .appList td.app a strong {
+  float: left;
+  margin: 48px 0 0 20px;
+  color: #333;
+  font-size: 14px;
+}
+#app.app .appList td.app a strong h3 {
+  margin-bottom: 5px;
+}
+#app.app .appList td.app a strong span {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+  width: 150px;
+  line-height: 1.5em;
+}
+#app.app .appList tr:first-child td.app,
+#app.app .appList tr:first-child td.app a {
+  height: 140px;
+}
+#app.storage {
+  font-size: 12px;
+}
+#app.storage #container {
+  margin: 20px;
+  border: 1px solid #eaeaea;
+  border-width: 1px 0 0 1px;
+}
+#app.storage .storageList {
+  background: #fff;
+  border-collapse: collapse;
+  width: 100%;
+}
+#app.storage .storageList tr.actions {
+  height: 70px;
+}
+#app.storage .storageList tr.actions:hover {
+  background: #fff;
+}
+#app.storage .storageList tr.actions td {
+  position: relative;
+}
+#app.storage .storageList tr.actions .left {
+  position: absolute;
+  left: 20px;
+  top: 19px;
+}
+#app.storage .storageList tr.actions .left button {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  width: 36px;
+  height: 30px;
+  line-height: 30px;
+  outline: none;
+  cursor: pointer;
+  color: #555;
+}
+#app.storage .storageList tr.actions .left button:hover {
+  background: #f9f9f9;
+}
+#app.storage .storageList tr.actions .left #button_back {
+  border-left: 0;
+}
+#app.storage .storageList tr.actions .right {
+  *zoom: 1;
+  position: absolute;
+  right: 0px;
+  top: 19px;
+  width: 360px;
+  font-size: 12px;
+}
+#app.storage .storageList tr.actions .right:before,
+#app.storage .storageList tr.actions .right:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+#app.storage .storageList tr.actions .right:after {
+  clear: both;
+}
+#app.storage .storageList tr.actions .right .input {
+  float: left;
+  font-size: 12px;
+  padding: 5px 10px 7px 10px;
+  border-right: 0;
+}
+#app.storage .storageList tr.actions .right .input:active,
+#app.storage .storageList tr.actions .right .input:focus {
+  border-color: #d9d9d9;
+}
+#app.storage .storageList tr.actions .right .button,
+#app.storage .storageList tr.actions .right .button:hover {
+  float: left;
+  padding: 0 10px;
+  border-color: #D9D9D9;
+  background: #F7F7F7;
+  color: #555;
+  outline: none;
+}
+#app.storage .storageList tr.actions .right .button.upload,
+#app.storage .storageList tr.actions .right .button:hover.upload {
+  margin-left: 10px;
+}
+#app.storage .storageList tr.actions .right .button:hover {
+  background: #E8E8E8;
+}
+#app.storage .storageList tr.actions .right .button.disabled {
+  opacity: 0.3;
+  background: #f7f7f7;
+}
+#app.storage .storageList td {
+  border: 1px solid #e9e9e9;
+  border-width: 0 1px 1px 0;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 20px;
+}
+#app.storage .storageList td.empty,
+#app.storage .storageList td.empty:hover {
+  background: #fff;
+}
+#app.storage .storageList td.name {
+  width: 40%;
+}
+#app.storage .storageList td.user {
+  width: 10%;
+}
+#app.storage .storageList td.size {
+  width: 10%;
+}
+#app.storage .storageList td.time {
+  width: 20%;
+}
+#app.storage .storageList td.method {
+  width: 20%;
+}
+#app.storage .storageList td.method a {
+  margin-right: 10px;
+}
+#app.storage .storageList tr.sections {
+  background: #f7f7f7;
+}
+#app.storage .storageList tr.sections td {
+  height: 25px;
+  line-height: 25px;
+  color: #999;
+}
+#app.storage .storageList tbody tr:hover {
+  background-color: #fafafa;
+}
+/*!
+ * FullCalendar v2.1.1 Stylesheet
+ * Docs & License: http://arshaw.com/fullcalendar/
+ * (c) 2013 Adam Shaw
+ */
+.fc {
+  direction: ltr;
+  text-align: left;
+}
+.fc-rtl {
+  text-align: right;
+}
+body .fc {
+  /* extra precedence to overcome jqui */
+
+  font-size: 1em;
+}
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed hr,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover {
+  border-color: #e9e9e9;
+}
+.fc-unthemed .fc-popover {
+  background-color: #fff;
+}
+.fc-unthemed hr,
+.fc-unthemed .fc-popover .fc-header {
+  background: #eee;
+}
+.fc-unthemed .fc-popover .fc-header .fc-close {
+  color: #666;
+}
+.fc-unthemed .fc-today {
+  background: #FFF8E2;
+}
+.fc-highlight {
+  background: #bce8f1;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  /* for IE */
+
+}
+.fc-icon {
+  display: inline-block;
+  font-size: 2em;
+  line-height: .5em;
+  height: .5em;
+  /* will make the total height 1em */
+
+  font-family: "Courier New", Courier, monospace;
+}
+.fc-icon-left-single-arrow:after {
+  content: "\02039";
+  font-weight: bold;
+}
+.fc-icon-right-single-arrow:after {
+  content: "\0203A";
+  font-weight: bold;
+}
+.fc-icon-left-double-arrow:after {
+  content: "\000AB";
+}
+.fc-icon-right-double-arrow:after {
+  content: "\000BB";
+}
+.fc-icon-x:after {
+  content: "\000D7";
+}
+.fc button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  height: 30px;
+  line-height: 29px;
+  padding: 0 .6em;
+  font-size: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: 0;
+}
+.fc button::-moz-focus-inner {
+  margin: 0;
+  padding: 0;
+}
+.fc-state-default {
+  /* non-theme */
+
+  border: 1px solid;
+}
+.fc button .fc-icon {
+  position: relative;
+  top: .05em;
+  margin: 0 .1em;
+}
+.fc-state-default {
+  background-color: transparent;
+  border-color: #e5e5e5;
+  color: #555;
+}
+.fc-title {
+  height: 21px;
+  display: block;
+}
+.fc-title.completed {
+  text-decoration: line-through;
+}
+.fc-title span {
+  margin-left: 18px;
+  display: block;
+  line-height: 19px;
+}
+.fc-state-hover,
+.fc-state-down,
+.fc-state-active,
+.fc-state-disabled {
+  color: #555;
+  background-color: #f9f9f9;
+}
+.fc-state-active {
+  background: #FFF;
+}
+.fc-state-hover {
+  color: #555;
+  text-decoration: none;
+  background-position: 0 -15px;
+}
+.fc-state-disabled {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+.fc-button-group {
+  display: inline-block;
+}
+.fc .fc-button-group > * {
+  /* extra precedence b/c buttons have margin set to zero */
+
+  float: left;
+  margin: 0 0 0 -1px;
+}
+.fc .fc-button-group > :first-child {
+  /* same */
+
+  margin-left: 0;
+}
+.fc .fc-button-group > :last-child {
+  /* same */
+
+  margin-left: -1px;
+}
+.fc-popover {
+  position: absolute;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.fc-popover .fc-header {
+  padding: 6px 6px;
+}
+.fc-popover .fc-header .fc-title {
+  margin: 0 2px;
+}
+.fc-popover .fc-header .fc-close {
+  cursor: pointer;
+}
+.fc-ltr .fc-popover .fc-header .fc-title,
+.fc-rtl .fc-popover .fc-header .fc-close {
+  float: left;
+}
+.fc-rtl .fc-popover .fc-header .fc-title,
+.fc-ltr .fc-popover .fc-header .fc-close {
+  float: right;
+}
+.fc-unthemed .fc-popover {
+  border-width: 1px;
+  border-style: solid;
+}
+.fc-unthemed .fc-popover .fc-header .fc-close {
+  font-size: 25px;
+  margin-top: 4px;
+}
+.fc-popover > .ui-widget-header + .ui-widget-content {
+  border-top: 0;
+  /* where they meet, let the header have the border */
+
+}
+.fc hr {
+  height: 0;
+  margin: 0;
+  padding: 0 0 2px;
+  /* height is unreliable across browsers, so use padding */
+
+  border-style: solid;
+  border-width: 1px 0;
+}
+.fc-clear {
+  clear: both;
+}
+.fc-bg,
+.fc-highlight-skeleton,
+.fc-helper-skeleton {
+  /* these element should always cling to top-left/right corners */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.fc-bg {
+  bottom: 0;
+  /* strech bg to bottom edge */
+
+}
+.fc-bg table {
+  height: 100%;
+  /* strech bg to bottom edge */
+
+}
+/* Tables
+--------------------------------------------------------------------------------------------------*/
+.fc table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  /* normalize cross-browser */
+
+}
+.fc th {
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  color: #999;
+  font-weight: normal;
+  background: #F7F7F7 !important;
+}
+.fc th,
+.fc td {
+  border-style: solid;
+  border-width: 1px;
+  padding: 0;
+  vertical-align: top;
+  background: #fff;
+}
+.fc td.fc-today {
+  border-style: double;
+  /* overcome neighboring borders */
+
+}
+/* Fake Table Rows
+--------------------------------------------------------------------------------------------------*/
+.fc .fc-row {
+  /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
+
+  /* no visible border by default. but make available if need be (scrollbar width compensation) */
+
+  border-style: solid;
+  border-width: 0;
+}
+.fc-row table {
+  /* don't put left/right border on anything within a fake row.
+	   the outer tbody will worry about this */
+
+  border-left: 0 hidden transparent;
+  border-right: 0 hidden transparent;
+  /* no bottom borders on rows */
+
+  border-bottom: 0 hidden transparent;
+}
+.fc-row:first-child table {
+  border-top: 0 hidden transparent;
+  /* no top border on first row */
+
+}
+/* Day Row (used within the header and the DayGrid)
+--------------------------------------------------------------------------------------------------*/
+.fc-row {
+  position: relative;
+}
+.fc-row .fc-bg {
+  z-index: 1;
+}
+/* highlighting cells */
+.fc-row .fc-highlight-skeleton {
+  z-index: 2;
+  bottom: 0;
+  /* stretch skeleton to bottom of row */
+
+}
+.fc-row .fc-highlight-skeleton table {
+  height: 100%;
+  /* stretch skeleton to bottom of row */
+
+}
+.fc-row .fc-highlight-skeleton td {
+  border-color: transparent;
+}
+/*
+row content (which contains day/week numbers and events) as well as "helper" (which contains
+temporary rendered events).
+*/
+.fc-row .fc-content-skeleton {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 2px;
+  /* matches the space above the events */
+
+}
+.fc-row .fc-helper-skeleton {
+  z-index: 4;
+}
+.fc-row .fc-content-skeleton td,
+.fc-row .fc-helper-skeleton td {
+  /* see-through to the background below */
+
+  background: none;
+  /* in case <td>s are globally styled */
+
+  border-color: transparent;
+  /* don't put a border between events and/or the day number */
+
+  border-bottom: 0;
+}
+.fc-row .fc-content-skeleton tbody td,
+.fc-row .fc-helper-skeleton tbody td {
+  /* don't put a border between event cells */
+
+  border-top: 0;
+}
+.fc-widget-header {
+  margin-right: 0!important;
+}
+.fc-other-month {
+  background: #fafafa!important;
+}
+/* Scrolling Container
+--------------------------------------------------------------------------------------------------*/
+.fc-scroller {
+  /* this class goes on elements for guaranteed vertical scrollbars */
+
+  overflow-x: hidden;
+  height: auto!important;
+}
+.fc-scroller > * {
+  /* we expect an immediate inner element */
+
+  position: relative;
+  /* re-scope all positions */
+
+  width: 100%;
+  /* hack to force re-sizing this inner element when scrollbars appear/disappear */
+
+  overflow: hidden;
+  /* don't let negative margins or absolute positioning create further scroll */
+
+}
+/* Global Event Styles
+--------------------------------------------------------------------------------------------------*/
+.fc-event {
+  position: relative;
+  /* for resize handle and other inner positioning */
+
+  display: block;
+  /* make the <a> tag block */
+
+  line-height: 21px;
+  background-color: #E4FADC;
+  /* default BACKGROUND color */
+
+  border-left: 3px solid #65DB39;
+  color: #65DB39;
+  font-weight: normal;
+  /* undo jqui's ui-widget-header bold */
+
+}
+.fc-event .fc-time {
+  font-weight: bold;
+}
+.fc-event.fc-red {
+  color: #FF3300;
+  border-color: #FF3300;
+  background-color: #FFF0E6;
+}
+.fc-event.fc-gray {
+  color: #7E7E7E;
+  border-color: #7E7E7E;
+  background-color: #F4F4F4;
+}
+.fc-event.fc-yellow {
+  color: #ffcc00;
+  border-color: #ffcc00;
+  background-color: #FFFBD4;
+}
+.fc-event.fc-blue {
+  color: #419AFF;
+  border-color: #419AFF;
+  background-color: #D5E9FF;
+}
+.fc-event.fc-purple {
+  color: #B241FF;
+  border-color: #B241FF;
+  background-color: #F0DAFF;
+}
+.fc-event.fc-done {
+  opacity: 0.3;
+}
+/* overpower some of bootstrap's and jqui's styles on <a> tags */
+.fc-event,
+.fc-event:hover,
+.ui-widget .fc-event {
+  text-decoration: none;
+  /* if <a> has an href */
+
+}
+.fc-event[href],
+.fc-event.fc-draggable {
+  cursor: pointer;
+  /* give events with links and draggable events a hand mouse pointer */
+
+}
+/* DayGrid events
+----------------------------------------------------------------------------------------------------
+We use the full "fc-day-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+.fc-day-grid-event {
+  margin: 2px 2px 0;
+  /* spacing between events and edges */
+
+  padding: 0 4px;
+}
+/* events that are continuing to/from another week. kill rounded corners and butt up against edge */
+.fc-ltr .fc-day-grid-event.fc-not-start,
+.fc-rtl .fc-day-grid-event.fc-not-end {
+  border-left-width: 0;
+}
+.fc-ltr .fc-day-grid-event.fc-not-end,
+.fc-rtl .fc-day-grid-event.fc-not-start {
+  border-right-width: 0;
+}
+.fc-day-grid-event > .fc-content {
+  /* force events to be one-line tall */
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+.fc-day-grid-event .fc-time {
+  margin-right: 2px;
+}
+/* resize handle (outside of fc-content, so can go outside of bounds) */
+.fc-day-grid-event .fc-resizer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+}
+.fc-ltr .fc-day-grid-event .fc-resizer {
+  right: -3px;
+  cursor: e-resize;
+}
+.fc-rtl .fc-day-grid-event .fc-resizer {
+  left: -3px;
+  cursor: w-resize;
+}
+/* Event Limiting
+--------------------------------------------------------------------------------------------------*/
+/* "more" link that represents hidden events */
+a.fc-more {
+  display: block;
+  margin: 4px 6px;
+  font-size: .85em;
+  cursor: pointer;
+  text-decoration: none;
+}
+a.fc-more:hover {
+  text-decoration: underline;
+}
+.fc-limited {
+  /* rows and cells that are hidden because of a "more" link */
+
+  display: none;
+}
+/* popover that appears when "more" link is clicked */
+.fc-day-grid .fc-row {
+  z-index: 1;
+  /* make the "more" popover one higher than this */
+
+}
+.fc-more-popover {
+  z-index: 2;
+  width: 220px;
+}
+.fc-more-popover .fc-event-container {
+  padding: 10px;
+}
+.fc-more-popover .fc-event-container .fc-event.fc-draggable {
+  margin-left: 0;
+}
+/* Toolbar
+--------------------------------------------------------------------------------------------------*/
+.fc-toolbar {
+  text-align: center;
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-bottom: 0;
+}
+.fc-toolbar .fc-left {
+  float: left;
+}
+.fc-toolbar .fc-left h2 {
+  font-size: 18px;
+  background: #fff;
+  margin-left: 20px;
+  height: 30px;
+  line-height: 30px;
+  color: #84a099;
+  font-weight: normal;
+  font-family: arial, sans-serif;
+}
+.fc-toolbar .fc-right {
+  float: right;
+}
+.fc-toolbar .fc-right .select {
+  width: 150px;
+  margin-left: 10px;
+}
+.fc-toolbar .fc-right button {
+  width: 40px;
+}
+.fc-toolbar .fc-right button:hover {
+  background: #f9f9f9 !important;
+}
+.fc-toolbar .fc-center {
+  display: inline-block;
+}
+/* the things within each left/right/center section */
+.fc .fc-toolbar > * > * {
+  /* extra precedence to override button border margins */
+
+  float: left;
+  margin-left: .75em;
+}
+/* the first thing within each left/center/right section */
+.fc .fc-toolbar > * > :first-child {
+  /* extra precedence to override button border margins */
+
+  margin-left: 0;
+}
+/* title text */
+.fc-toolbar h2 {
+  margin: 0;
+}
+/* button layering (for border precedence) */
+.fc-toolbar button {
+  position: relative;
+}
+.fc-toolbar .fc-state-hover,
+.fc-toolbar .ui-state-hover {
+  z-index: 2;
+}
+.fc-toolbar .fc-state-down {
+  z-index: 3;
+}
+.fc-toolbar .fc-state-active,
+.fc-toolbar .ui-state-active {
+  z-index: 4;
+}
+.fc-toolbar button:focus {
+  z-index: 5;
+}
+/* View Structure
+--------------------------------------------------------------------------------------------------*/
+.fc-view-container {
+  position: relative;
+}
+/* undo twitter bootstrap's box-sizing rules. normalizes positioning techniques */
+/* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
+.fc-view-container *,
+.fc-view-container *:before,
+.fc-view-container *:after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.fc-view,
+.fc-view > table {
+  /* so dragged elements can be above the view's main element */
+
+  position: relative;
+  z-index: 1;
+}
+/* BasicView
+--------------------------------------------------------------------------------------------------*/
+/* day row structure */
+.fc-basicWeek-view .fc-content-skeleton,
+.fc-basicDay-view .fc-content-skeleton {
+  /* we are sure there are no day numbers in these views, so... */
+
+  padding-top: 1px;
+  /* add a pixel to make sure there are 2px padding above events */
+
+  padding-bottom: 1em;
+  /* ensure a space at bottom of cell for user selecting/clicking */
+
+}
+.fc-basic-view tbody .fc-row {
+  min-height: 180px;
+  /* ensure that all rows are at least this tall */
+
+}
+/* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
+.fc-row.fc-rigid {
+  overflow: hidden;
+}
+.fc-row.fc-rigid .fc-content-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* week and day number styling */
+.fc-basic-view .fc-week-number,
+.fc-basic-view .fc-day-number {
+  padding: 0 6px;
+}
+.fc-basic-view td.fc-week-number span,
+.fc-basic-view td.fc-day-number {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.fc-basic-view .fc-week-number {
+  text-align: center;
+}
+.fc-basic-view .fc-week-number span {
+  /* work around the way we do column resizing and ensure a minimum width */
+
+  display: inline-block;
+  min-width: 1.25em;
+}
+.fc-ltr .fc-basic-view .fc-day-number {
+  text-align: right;
+}
+.fc-rtl .fc-basic-view .fc-day-number {
+  text-align: left;
+}
+.fc-day-number.fc-other-month {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* for IE */
+
+  /* opacity with small font can sometimes look too faded
+	   might want to set the 'color' property instead
+	   making day-numbers bold also fixes the problem */
+
+}
+/* AgendaView all-day area
+--------------------------------------------------------------------------------------------------*/
+.fc-agenda-view .fc-day-grid {
+  position: relative;
+  z-index: 2;
+  /* so the "more.." popover will be over the time grid */
+
+}
+.fc-agenda-view .fc-day-grid .fc-row {
+  min-height: 3em;
+  /* all-day section will never get shorter than this */
+
+}
+.fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
+  padding-top: 1px;
+  /* add a pixel to make sure there are 2px padding above events */
+
+  padding-bottom: 1em;
+  /* give space underneath events for clicking/selecting days */
+
+}
+/* TimeGrid axis running down the side (for both the all-day area and the slot area)
+--------------------------------------------------------------------------------------------------*/
+.fc .fc-axis {
+  /* .fc to overcome default cell styles */
+
+  vertical-align: middle;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+.fc-ltr .fc-axis {
+  text-align: right;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.fc-rtl .fc-axis {
+  text-align: left;
+}
+.ui-widget td.fc-axis {
+  font-weight: normal;
+  /* overcome jqui theme making it bold */
+
+}
+/* TimeGrid Structure
+--------------------------------------------------------------------------------------------------*/
+.fc-time-grid-container,
+.fc-time-grid {
+  /* so slats/bg/content/etc positions get scoped within here */
+
+  position: relative;
+  z-index: 1;
+}
+.fc-time-grid {
+  min-height: 100%;
+  /* so if height setting is 'auto', .fc-bg stretches to fill height */
+
+}
+.fc-time-grid table {
+  /* don't put outer borders on slats/bg/content/etc */
+
+  border: 0 hidden transparent;
+}
+.fc-time-grid > .fc-bg {
+  z-index: 1;
+}
+.fc-time-grid .fc-slats,
+.fc-time-grid > hr {
+  /* the <hr> AgendaView injects when grid is shorter than scroller */
+
+  position: relative;
+  z-index: 2;
+}
+.fc-time-grid .fc-highlight-skeleton {
+  z-index: 3;
+}
+.fc-time-grid .fc-content-skeleton {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.fc-time-grid > .fc-helper-skeleton {
+  z-index: 5;
+}
+/* TimeGrid Slats (lines that run horizontally)
+--------------------------------------------------------------------------------------------------*/
+.fc-slats td {
+  height: 1.5em;
+  border-bottom: 0;
+  /* each cell is responsible for its top border */
+
+}
+.fc-slats .fc-minor td {
+  border-top-style: dotted;
+}
+.fc-slats .ui-widget-content {
+  /* for jqui theme */
+
+  background: none;
+  /* see through to fc-bg */
+
+}
+/* TimeGrid Highlighting Slots
+--------------------------------------------------------------------------------------------------*/
+.fc-time-grid .fc-highlight-container {
+  /* a div within a cell within the fc-highlight-skeleton */
+
+  position: relative;
+  /* scopes the left/right of the fc-highlight to be in the column */
+
+}
+.fc-time-grid .fc-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top and bottom will be in by JS */
+
+}
+/* TimeGrid Event Containment
+--------------------------------------------------------------------------------------------------*/
+.fc-time-grid .fc-event-container {
+  /* a div within a cell within the fc-content-skeleton */
+
+  position: relative;
+}
+.fc-ltr .fc-time-grid .fc-event-container {
+  /* space on the sides of events for LTR (default) */
+
+  margin: 0 2.5% 0 2px;
+}
+.fc-rtl .fc-time-grid .fc-event-container {
+  /* space on the sides of events for RTL */
+
+  margin: 0 2px 0 2.5%;
+}
+.fc-time-grid .fc-event {
+  position: absolute;
+  z-index: 1;
+  /* scope inner z-index's */
+
+}
+/* TimeGrid Event Styling
+----------------------------------------------------------------------------------------------------
+We use the full "fc-time-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+.fc-time-grid-event.fc-not-start {
+  /* events that are continuing from another day */
+
+  /* replace space made by the top border with padding */
+
+  border-top-width: 0;
+  padding-top: 1px;
+}
+.fc-time-grid-event.fc-not-end {
+  /* replace space made by the top border with padding */
+
+  border-bottom-width: 0;
+  padding-bottom: 1px;
+}
+.fc-time-grid-event {
+  overflow: hidden;
+  /* don't let the bg flow over rounded corners */
+
+}
+.fc-time-grid-event > .fc-content {
+  /* contains the time and title, but no bg and resizer */
+
+  position: relative;
+  z-index: 2;
+  /* above the bg */
+
+}
+.fc-time-grid-event .fc-time,
+.fc-time-grid-event .fc-title {
+  padding: 0 1px;
+}
+.fc-time-grid-event .fc-time {
+  font-size: .85em;
+  white-space: nowrap;
+}
+.fc-time-grid-event .fc-bg {
+  z-index: 1;
+  background: #fff;
+  opacity: .25;
+  filter: alpha(opacity=25);
+  /* for IE */
+
+}
+/* short mode, where time and title are on the same line */
+.fc-time-grid-event.fc-short .fc-content {
+  /* don't wrap to second line (now that contents will be inline) */
+
+  white-space: nowrap;
+}
+.fc-time-grid-event.fc-short .fc-time,
+.fc-time-grid-event.fc-short .fc-title {
+  /* put the time and title on the same line */
+
+  display: inline-block;
+  vertical-align: top;
+}
+.fc-time-grid-event.fc-short .fc-time span {
+  display: none;
+  /* don't display the full time text... */
+
+}
+.fc-time-grid-event.fc-short .fc-time:before {
+  content: attr(data-start);
+  /* ...instead, display only the start time */
+
+}
+.fc-time-grid-event.fc-short .fc-time:after {
+  content: "\000A0-\000A0";
+  /* seperate with a dash, wrapped in nbsp's */
+
+}
+.fc-time-grid-event.fc-short .fc-title {
+  font-size: .85em;
+  /* make the title text the same size as the time */
+
+  padding: 0;
+  /* undo padding from above */
+
+}
+.fc-time-grid-event .fc-resizer {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  overflow: hidden;
+  line-height: 8px;
+  font-size: 11px;
+  font-family: monospace;
+  text-align: center;
+  cursor: s-resize;
+}
+.fc-time-grid-event .fc-resizer:after {
+  content: "=";
+}
+.xdsoft_datetimepicker {
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.506);
+  background: #FFFFFF;
+  border-bottom: 1px solid #BBBBBB;
+  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+  color: #333333;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  padding: 2px 9px 9px 1px;
+  position: absolute;
+  z-index: 9999;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+}
+.xdsoft_datetimepicker iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75px;
+  height: 210px;
+  background: transparent;
+  border: none;
+}
+/*For IE8 or lower*/
+.xdsoft_datetimepicker button {
+  border: none !important;
+}
+.xdsoft_noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.xdsoft_noselect::selection {
+  background: transparent;
+}
+.xdsoft_noselect::-moz-selection {
+  background: transparent;
+}
+.xdsoft_datetimepicker.xdsoft_inline {
+  display: inline-block;
+  position: static;
+  box-shadow: none;
+}
+.xdsoft_datetimepicker * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.xdsoft_datetimepicker .xdsoft_datepicker,
+.xdsoft_datetimepicker .xdsoft_timepicker {
+  display: none;
+}
+.xdsoft_datetimepicker .xdsoft_datepicker.active,
+.xdsoft_datetimepicker .xdsoft_timepicker.active {
+  display: block;
+}
+.xdsoft_datetimepicker .xdsoft_datepicker {
+  width: 224px;
+  float: left;
+  margin-left: 8px;
+}
+.xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_datepicker {
+  width: 256px;
+}
+.xdsoft_datetimepicker .xdsoft_timepicker {
+  width: 58px;
+  float: left;
+  text-align: center;
+  margin-left: 8px;
+  margin-top: 0;
+}
+.xdsoft_datetimepicker .xdsoft_datepicker.active + .xdsoft_timepicker {
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+.xdsoft_datetimepicker .xdsoft_mounthpicker {
+  position: relative;
+  text-align: center;
+}
+.xdsoft_datetimepicker .xdsoft_label i,
+.xdsoft_datetimepicker .xdsoft_prev,
+.xdsoft_datetimepicker .xdsoft_next,
+.xdsoft_datetimepicker .xdsoft_today_button {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAeCAYAAADaW7vzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NBRjI1NjM0M0UwMTFFNDk4NkFGMzJFQkQzQjEwRUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NBRjI1NjQ0M0UwMTFFNDk4NkFGMzJFQkQzQjEwRUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0FGMjU2MTQzRTAxMUU0OTg2QUYzMkVCRDNCMTBFQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0FGMjU2MjQzRTAxMUU0OTg2QUYzMkVCRDNCMTBFQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoNEP54AAAIOSURBVHja7Jq9TsMwEMcxrZD4WpBYeKUCe+kTMCACHZh4BFfHO/AAIHZGFhYkBBsSEqxsLCAgXKhbXYOTxh9pfJVP+qutnZ5s/5Lz2Y5I03QhWji2GIcgAokWgfCxNvcOCCGKqiSqhUp0laHOne05vdEyGMfkdxJDVjgwDlEQgYQBgx+ULJaWSXXS6r/ER5FBVR8VfGftTKcITNs+a1XpcFoExREIDF14AVIFxgQUS+h520cdud6wNkC0UBw6BCO/HoCYwBhD8QCkQ/x1mwDyD4plh4D6DDV0TAGyo4HcawLIBBSLDkHeH0Mg2yVP3l4TQMZQDDsEOl/MgHQqhMNuE0D+oBh0CIr8MAKyazBH9WyBuKxDWgbXfjNf32TZ1KWm/Ap1oSk/R53UtQ5xTh3LUlMmT8gt6g51Q9p+SobxgJQ/qmsfZhWywGFSl0yBjCLJCMgXail3b7+rumdVJ2YRss4cN+r6qAHDkPWjPjdJCF4n9RmAD/V9A/Wp4NQassDjwlB6XBiCxcJQWmZZb8THFilfy/lfrTvLghq2TqTHrRMTKNJ0sIhdo15RT+RpyWwFdY96UZ/LdQKBGjcXpcc1AlSFEfLmouD+1knuxBDUVrvOBmoOC/rEcN7OQxKVeJTCiAdUzUJhA2Oez9QTkp72OTVcxDcXY8iKNkxGAJXmJCOQwOa6dhyXsOa6XwEGAKdeb5ET3rQdAAAAAElFTkSuQmCC);
+}
+.xdsoft_datetimepicker .xdsoft_label i {
+  opacity: 0.5;
+  background-position: -92px -19px;
+  display: inline-block;
+  width: 9px;
+  height: 20px;
+  vertical-align: middle;
+}
+.xdsoft_datetimepicker .xdsoft_prev {
+  float: left;
+  background-position: -20px 0;
+}
+.xdsoft_datetimepicker .xdsoft_today_button {
+  float: left;
+  background-position: -70px 0;
+  margin-left: 5px;
+}
+.xdsoft_datetimepicker .xdsoft_next {
+  float: right;
+  background-position: 0 0;
+}
+.xdsoft_datetimepicker .xdsoft_next,
+.xdsoft_datetimepicker .xdsoft_prev,
+.xdsoft_datetimepicker .xdsoft_today_button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0 none currentColor;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  outline: medium none currentColor;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 20px;
+}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_next {
+  float: none;
+  background-position: -40px -15px;
+  height: 15px;
+  width: 30px;
+  display: block;
+  margin-left: 14px;
+  margin-top: 7px;
+}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev {
+  background-position: -40px 0;
+  margin-bottom: 7px;
+  margin-top: 0;
+}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+  height: 151px;
+  overflow: hidden;
+  border-bottom: 1px solid #DDDDDD;
+}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div {
+  background: #F5F5F5;
+  border-top: 1px solid #DDDDDD;
+  color: #666666;
+  font-size: 12px;
+  text-align: center;
+  border-collapse: collapse;
+  cursor: pointer;
+  border-bottom-width: 0;
+  height: 25px;
+  line-height: 25px;
+}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:first-child {
+  border-top-width: 0;
+}
+.xdsoft_datetimepicker .xdsoft_today_button:hover,
+.xdsoft_datetimepicker .xdsoft_next:hover,
+.xdsoft_datetimepicker .xdsoft_prev:hover {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.xdsoft_datetimepicker .xdsoft_label {
+  display: inline;
+  position: relative;
+  z-index: 9999;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  float: left;
+  width: 182px;
+  text-align: center;
+  cursor: pointer;
+}
+.xdsoft_datetimepicker .xdsoft_label:hover > span {
+  text-decoration: underline;
+}
+.xdsoft_datetimepicker .xdsoft_label:hover i {
+  opacity: 1.0;
+}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
+  border: 1px solid #ccc;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  z-index: 101;
+  display: none;
+  background: #fff;
+  max-height: 160px;
+  overflow-y: hidden;
+}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select.xdsoft_monthselect {
+  right: -7px;
+}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select.xdsoft_yearselect {
+  right: 2px;
+}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
+  color: #fff;
+  background: #ff8000;
+}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option {
+  padding: 2px 10px 2px 5px;
+  text-decoration: none !important;
+}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+  background: #33AAFF;
+  box-shadow: #178FE5 0 1px 3px 0 inset;
+  color: #fff;
+  font-weight: 700;
+}
+.xdsoft_datetimepicker .xdsoft_month {
+  width: 100px;
+  text-align: right;
+}
+.xdsoft_datetimepicker .xdsoft_calendar {
+  clear: both;
+}
+.xdsoft_datetimepicker .xdsoft_year {
+  width: 48px;
+  margin-left: 5px;
+}
+.xdsoft_datetimepicker .xdsoft_calendar table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td > div {
+  padding-right: 5px;
+}
+.xdsoft_datetimepicker .xdsoft_calendar th {
+  height: 25px;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td,
+.xdsoft_datetimepicker .xdsoft_calendar th {
+  width: 14.2857142%;
+  background: #F5F5F5;
+  border: 1px solid #DDDDDD;
+  color: #666666;
+  font-size: 12px;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0;
+  border-collapse: collapse;
+  cursor: pointer;
+  height: 25px;
+}
+.xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_calendar td,
+.xdsoft_datetimepicker.xdsoft_showweeks .xdsoft_calendar th {
+  width: 12.5%;
+}
+.xdsoft_datetimepicker .xdsoft_calendar th {
+  background: #F1F1F1;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
+  color: #33AAFF;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
+  background: #33AAFF;
+  color: #fff;
+  font-weight: 700;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_other_month,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_disabled,
+.xdsoft_datetimepicker .xdsoft_time_box > div > div.xdsoft_disabled {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_other_month.xdsoft_disabled {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+}
+.xdsoft_datetimepicker .xdsoft_calendar td:hover,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+  color: #fff !important;
+  background: #ff8000 !important;
+  box-shadow: none !important;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_disabled:hover,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_disabled:hover {
+  color: inherit	!important;
+  background: inherit !important;
+  box-shadow: inherit !important;
+}
+.xdsoft_datetimepicker .xdsoft_calendar th {
+  font-weight: 700;
+  text-align: center;
+  color: #999;
+  cursor: default;
+}
+.xdsoft_datetimepicker .xdsoft_copyright {
+  color: #ccc !important;
+  font-size: 10px;
+  clear: both;
+  float: none;
+  margin-left: 8px;
+}
+.xdsoft_datetimepicker .xdsoft_copyright a {
+  color: #eee !important;
+}
+.xdsoft_datetimepicker .xdsoft_copyright a:hover {
+  color: #aaa !important;
+}
+.xdsoft_time_box {
+  position: relative;
+  border: 1px solid #ccc;
+}
+.xdsoft_scrollbar > .xdsoft_scroller {
+  background: #ccc !important;
+  height: 20px;
+  border-radius: 3px;
+}
+.xdsoft_scrollbar {
+  position: absolute;
+  width: 7px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.xdsoft_scroller_box {
+  position: relative;
+}

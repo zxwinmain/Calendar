@@ -1,0 +1,10 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<tr id="<%= ID %>">
+    <td class="name"><%= NAME %></td>
+    <td class="user"><%= USER %></td>
+    <td class="size"><%= SIZE %></td>
+    <td class="time"><%= TIME %></td>
+    <td class="method"><a class="downloadFile" href="/api/storage/files/<%= ID %>" target="_blank"><%= locale.root.storage.download %></a><a class="renameFile"><%= locale.root.storage.rename %></a><a class="deleteFile"><%= locale.root.storage.delete %></a></td>
+</tr>

@@ -1,0 +1,28 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<% for(var listIndex in list) { %>
+<dl id="<%= list[listIndex].ID %>">
+    <dt><img class="userAvatar" src="<%= list[listIndex].BODY_AVATAR %>"><span class="userName"><%= list[listIndex].BODY_NAME %></span><span class="userEmail"><%= list[listIndex].BODY_EMAIL %></span></dt>
+<% for(var logIndex in list[listIndex].RECORDS) { %>
+    <% if(list[listIndex].RECORDS[logIndex].RELATION_APPLICATION == 'CALENDAR') { %>
+    <dd id="<%= list[listIndex].RECORDS[logIndex].ID %>">
+        <span class="message">
+            <span class="time"><%= moment.unix(list[listIndex].RECORDS[logIndex].TIME_CREATED).tz(localStorage.getItem('timezone')).format('HH:mm:ss') %></span>
+            <span class="desc"><%= locale.root.review.event_at %> <%= moment.unix(list[listIndex].RECORDS[logIndex].RELATION_BODY.BODY_START).tz(localStorage.getItem('timezone')).format('YYYY-MM-DD') %> <%= locale.root.review[list[listIndex].RECORDS[logIndex].BODY_MESSAGE] %></span>
+        </span>
+        <span class="relation" id="<%= list[listIndex].RECORDS[logIndex].RELATION_ID %>" data-body="<%= encodeURIComponent(JSON.stringify(list[listIndex].RECORDS[logIndex].RELATION_BODY)) %>">
+            <a class="fc-day-grid-event fc-event <%= list[listIndex].RECORDS[logIndex].RELATION_BODY.BODY_CLASS %>">
+                <div class="fc-content">
+                    <span class="fc-title">
+                        <input class="checkbox" type="checkbox" disabled="disabled"<% if(parseInt(list[listIndex].RECORDS[logIndex].RELATION_BODY.IS_DONE) == 1){ %> checked="checked"<% } %>>
+                        <span><%= list[listIndex].RECORDS[logIndex].RELATION_BODY.BODY_NAME %></span>
+                    </span>
+                </div>
+            </a>
+        </span>
+    </dd>
+    <% } %>
+<% } %>
+</dl>
+<% } %>

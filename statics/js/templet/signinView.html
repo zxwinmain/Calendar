@@ -1,0 +1,20 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+
+<div id="session" class="signin">
+    <div class="container">
+        <div class="content">
+            <h1><%= locale.root.signin.title %></h1>
+            <form method="post">
+                <input class="input" name="USER_EMAIL" placeholder="someone@Example.com" type="text">
+                <input class="input" name="USER_PASSWORD" placeholder="<%= locale.root.signin.password %>" type="password">
+                <input id="signin_button" class="button" value="<%= locale.root.signin.signin %>" type="button">
+            </form>
+            <p class="line">
+                <span><a href="#forgot"><%= locale.root.signin.forgot %></a></span>
+                <span><a href="#signup"><%= locale.root.signin.signup %></a></span>
+            </p>
+        </div>
+    </div>
+</div>

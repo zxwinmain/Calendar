@@ -1,0 +1,98 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<div id="component_window_inner">
+    <div class="component_window_inner_tab" data-tab="profile">
+        <div class="section">
+            <label><%= locale.root.component_window.settings.profile_email %></label>
+            <input class="input" name="USER_EMAIL" value="<%= USER_EMAIL %>" disabled="disabled">
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.settings.profile_name %><span>*</span></label>
+            <input class="input" name="USER_NAME" value="<%= USER_NAME %>">
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.settings.profile_intro %></label>
+            <textarea class="textarea" name="USER_INTRO" rows="5"><%= USER_INTRO %></textarea>
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.settings.profile_password %></label>
+            <input class="input" name="USER_PASSWORD" type="password" placeholder="<%= locale.root.component_window.settings.profile_password_default %>">
+        </div>
+        <div class="section">
+            <input id="button_save_profile" class="button" value="<%= locale.root.component_window.common.button_save %>" type="button">
+        </div>
+    </div>
+    <div class="component_window_inner_tab" data-tab="avatar" style="display: none">
+        <div class="section">
+            <label><%= locale.root.component_window.settings.avatar_title %></label>
+            <input id="input_save_avatar" class="input" type="file" name="USER_AVATAR">
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.settings.avatar_preview %></label>
+            <img id="avatar_preview" src="<%= app.instances.models.user.get('avatar') %>">
+        </div>
+        <div class="section">
+            <input id="button_save_avatar" class="button" value="<%= locale.root.component_window.common.button_save %>" type="button">
+        </div>
+    </div>
+    <div class="component_window_inner_tab" data-tab="locale" style="display: none">
+        <div class="section">
+            <label><%= locale.root.component_window.settings.locale_language %></label>
+            <select class="select" name="USER_LANGUAGE">
+                <option value="zh-cn"<% if (localStorage.getItem('locale') == 'zh-cn') { %>selected<% }; %>>Chinese Simplified</option>
+                <option value="en-us"<% if (localStorage.getItem('locale') == 'en-us') { %>selected<% }; %>>English</option>
+            </select>
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.settings.locale_timezone %></label>
+            <select class="select" name="USER_TIMEZONE">
+                <% for(var zone in TIMEZONES) { %>
+                    <option value="<%= TIMEZONES[zone] %>"<% if (localStorage.getItem('timezone') == TIMEZONES[zone]) { %>selected<% } %>><%= TIMEZONES[zone] %></option>
+                <% }; %>
+            </select>
+        </div>
+        <div class="section">
+            <input id="button_save_locale" class="button" value="<%= locale.root.component_window.common.button_save %>" type="button">
+        </div>
+    </div>
+    <div class="component_window_inner_tab" data-tab="system" style="display: none">
+        <div class="section">
+            <label><%= locale.root.component_window.settings.system_name %></label>
+            <input class="input" name="SYSTEM_NAME" value="<%= SYSTEM_NAME %>">
+        </div>
+        <div class="section">
+            <label><%= locale.root.component_window.settings.system_members %></label>
+            <dl id="userList">
+                <dt>
+                    <input id="input_save_new_user_name" class="input" placeholder="<%= locale.root.component_window.settings.system_members_invite_input_name %>">
+                    <input id="input_save_new_user_email" class="input" placeholder="<%= locale.root.component_window.settings.system_members_invite_input_email %>">
+                    <input id="button_save_new_user" class="button" type="button" value="<%= locale.root.component_window.settings.system_members_invite_button %>">
+                </dt>
+                <% 
+                    var users = app.instances.collections.users.toJSON();
+                    for(var index in users) { 
+                %>
+                <dd id="<%= users[index].id %>">
+                    <div class="left"><span class="name"<% if(users[index].is_administrator == 1){ %> style="color:red"<% } %><% if(parseInt(users[index].time_deleted) > 0){ %> style="color:#ccc"<% } %>><%= users[index].name %></span><span class="email"><%= users[index].email %></span></div>
+                    <div class="right"><a class="administrator icon-flash"></a><a class="resetPassword icon-ccw"></a><a class="block icon-minus-circled"></a><a class="delete icon-cancel"></a></div>
+                </dd>
+                <% } %>
+            </dl>
+        </div>
+        <div class="section">
+            <input id="button_save_system" class="button" value="<%= locale.root.component_window.common.button_save %>" type="button">
+        </div>
+    </div>
+</div>
+<div class="sidebar">
+    <ul class="swicher">
+        <li><a data-tab="profile"><%= locale.root.component_window.settings.profile %></a></li>
+        <li><a data-tab="avatar"><%= locale.root.component_window.settings.avatar %></a></li>
+        <li><a data-tab="locale"><%= locale.root.component_window.settings.i18n %></a></li>
+        <% if(parseInt(app.instances.models.user.get('is_administrator')) == 1) { %>
+        <li><a data-tab="system"><%= locale.root.component_window.settings.system %></a></li>
+        <% } %>
+        <li><a data-tab="signout"><%= locale.root.component_window.settings.signout %></a></li>
+    </ul>
+</div>

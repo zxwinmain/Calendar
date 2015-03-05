@@ -1,0 +1,5 @@
+name: airteams
+version: 1
+handle:
+- rewrite: if ( !is_dir() && !is_file() && path ~ "(.*)" ) goto "index.php"
+- compress:  if ( out_header["Content-Length"] >= 1024 ) compress

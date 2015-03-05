@@ -1,0 +1,22 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<div id="app" class="review">
+    <div class="main">
+        <div id="container">
+            <div id="mainContainer">
+                <div class="mainContainer_head"></div>
+                <div class="mainContainer_body"><span class="null"><%= locale.root.dialog.loading %></span></div>
+            </div>
+            <div id="dateSelectorContainer">
+                <input id="dateSelector">
+            </div>
+        </div>
+    </div>
+</div>
+<script id="span_null" type="text/html">
+    <span class="null"><%= locale.root.review.null %></span>
+</script>
+<script id="span_loading" type="text/html">
+    <span class="null"><%= locale.root.dialog.loading %></span>
+</script>

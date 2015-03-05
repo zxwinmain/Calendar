@@ -1,0 +1,19 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<div id="component_head">
+    <ul class="head">
+        <li><a>
+            <img src="<%= USER_AVATAR %>">
+            <strong><%= USER_NAME %><span><%= USER_EMAIL %></span></strong>
+            </a>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li><a href="#calendar"><i class="calendar"></i><%= locale.root.component_head.calendar %></a></li>
+        <li><a href="#review"><i class="review"></i><%= locale.root.component_head.review %></a></li>
+        <li><a href="#storage"><i class="storage"></i><%= locale.root.component_head.storage %></a></li>
+        <li><a href="#app"><i class="app"></i><%= locale.root.component_head.app %></a></li>
+        <li><a href="#support"><i class="support"></i><%= locale.root.component_head.support %></a></li>
+    </ul>
+</div>

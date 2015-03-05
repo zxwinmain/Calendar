@@ -1,0 +1,7 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<tr id="<%= ID %>">
+    <td class="name" colspan="4"><a class="folder"><%= NAME %></a></td>
+    <td class="method"><a class="renameFolder"><%= locale.root.storage.rename %></a><a class="deleteFolder"><%= locale.root.storage.delete %></a></td>
+</tr>

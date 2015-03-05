@@ -1,0 +1,10 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<a data-id="<%= ITEM_ID %>">
+    <img src="<%= ITEM_ICON %>">
+    <strong>
+        <h3><%= locale.root.app.name[ITEM_ID] %></h3>
+        <span><%= locale.root.app.from %> <%= ITEM_DEVELOPER %> <%= locale.root.app.supply %></span>
+    </strong>
+</a>

@@ -1,0 +1,48 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<div id="app" class="storage">
+    <div class="main">
+        <div id="container">
+            <table class="storageList" border="0">
+                <thead>
+                    <tr class="actions">
+                        <td colspan="5">
+                            <div class="left">
+                                <button id="button_home" type="button"><span class="icon-home"></span></button><button id="button_back" type="button" style="visibility: hidden"><span class="icon-reply"></span></button>
+                            </div>
+                            <div class="right">
+                                <input id="input_folder" class="input">
+                                <button id="button_save_folder" class="button" type="button"><%= locale.root.storage.folder_new %></button>
+                                <button id="button_upload" class="button upload" type="button"><%= locale.root.storage.upload %></button>
+                                <input id="input_file" type="file" name="ATTACHMENT" style="display: none;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="sections">
+                        <td class="name"><%= locale.root.storage.name %></td>
+                        <td class="user"><%= locale.root.storage.user %></td>
+                        <td class="size"><%= locale.root.storage.size %></td>
+                        <td class="time"><%= locale.root.storage.time %></td>
+                        <td class="method"><%= locale.root.storage.method %></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="empty" colspan="5"><%= locale.root.storage.loading %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script id="span_null" type="text/html">
+    <tr>
+        <td class="empty" colspan="5"><%= locale.root.storage.empty %></td>
+    </tr>
+</script>
+<script id="span_loading" type="text/html">
+    <tr>
+        <td class="empty" colspan="5"><%= locale.root.dialog.loading %></td>
+    </tr>
+</script>

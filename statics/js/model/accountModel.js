@@ -1,0 +1,1 @@
+define([],function(){app.models.account=Backbone.Model.extend({url:"/api/account",parse:function(e,t){return e.response?this.parseObject(e.response):this.parseObject(e)},parseObject:function(e){return{id:e.ID,name:e.BODY_NAME,time_created:e.TIME_CREATED,time_updated:e.TIME_UPDATED,time_deleted:e.TIME_DELETED}}})});

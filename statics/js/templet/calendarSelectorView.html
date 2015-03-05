@@ -1,0 +1,19 @@
+<% 
+	var locale = require('i18n!nls/locale');
+%>
+<div class="fc-button-group">
+	<select id="filter_user" class="select" name="CONDITION_USER">
+	    <option value="all"<% if (localStorage.getItem('calendar_member') == 'all') { %>selected<% } %>><%= locale.root.calendar.fliter_user_all %></option>
+    <% 
+        var users = app.instances.collections.users.toJSON();
+        for(var index in users) { 
+    %>
+        <option value="<%= users[index].id %>"<% if (localStorage.getItem('calendar_member') == users[index].id) { %>selected<% } %>><%= users[index].name %></option>
+    <% } %>
+	</select>
+	<select id="filter_state" class="select" name="CONDITION_STATE">
+	    <option value="all"<% if (localStorage.getItem('calendar_state') == 'all') { %>selected<% } %>><%= locale.root.calendar.fliter_state_all %></option>
+	    <option value="0"<% if (localStorage.getItem('calendar_state') == '0') { %>selected<% } %>><%= locale.root.calendar.fliter_state_planned %></option>
+	    <option value="1"<% if (localStorage.getItem('calendar_state') == '1') { %>selected<% } %>><%= locale.root.calendar.fliter_state_done %></option>
+	</select>
+</div>

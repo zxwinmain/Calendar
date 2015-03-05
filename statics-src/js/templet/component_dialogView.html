@@ -1,0 +1,14 @@
+<div id="component_dialog">
+    <div class="wrapper">
+        <div class="main">
+            <h1 class="title"><%= TITLE %></h1>
+            <div class="message"><%= MESSAGE %></div>
+            <div class="actions">
+                <input id="component_dialog_true" class="button inline" value="<%= BUTTON_TRUE_TITLE %>" type="button">
+                <% if (TYPE == 'CONFIRM') { %>
+                <input id="component_dialog_false" class="button inline cancel" value="<%= BUTTON_FALSE_TITLE %>" type="button">
+                <% }; %>
+            </div>
+        </div>
+    </div>
+</div>
